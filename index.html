@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Gruppo&family=Montserrat:wght@600&family=Pixelify+Sans&family=Poppins:wght@400;700&family=Space+Grotesk&display=swap"
         rel="stylesheet">
-    
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <link rel="stylesheet" href="./resources/css/style.css">
@@ -24,170 +25,187 @@
     <meta name="theme-color" content="#ffd500" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
+
 <body class="font-montserrat bg-white overflow-x-hidden">
 
-    <header class="bg-[#233d9b] backdrop-blur z-50  py-2">
-        
-        <nav
-            class="z-50 pt-2 flex items-center justify-between mx-auto bg-[#233d9b] lg:bg-transparent w-screen">
+    <header class="bg-[#fffcf7] backdrop-blur z-50  py-2">
+
+        <nav class="z-50 pt-2 flex items-center justify-between mx-auto bg-[#fffcf7] lg:bg-transparent w-screen">
             <div>
-                <a href="#home" class="flex items-center ">
-                    <img src="./resources/images/logo.png" class="lg:h-14 md:h-10 sm:h-8 h-6 mr-2">
-                    <span
-                        class="self-center sm:text-2xl font-semibold whitespace-nowrap text-cyan-50 font-black overflow-hidden font-montserrat xl:3xl xs:text-base">Prototype</span>
+                <a href="#home" class="flex items-center ml-3 ">
+                    <img src="./resources/images/logo.svg" class="lg:h-14 sm:h-12 h-10 mr-2">
                 </a>
             </div>
             <div
-                class="z-40 w-screen bg-white lg:bg-transparent nav-links lg:duration-0 duration-500 lg:static absolute lg:min-h-fit min-h-[35vh] lg:bg-transparent top-[100%] lg:w-auto flex items-center px-5 py-10 lg:py-0 lg:block hidden bg-[#233d9b]">
+                class="z-40 w-screen bg-white lg:bg-transparent nav-links lg:duration-0 duration-500 lg:static absolute lg:min-h-fit min-h-[35vh] lg:bg-transparent top-[100%] lg:w-auto flex items-center px-5 py-10 lg:py-0 lg:block hidden bg-[#fffcf7]">
                 <ul class="flex lg:right-0 lg:flex-row flex-col lg:items-center lg:gap-[2vw] gap-8">
                     <li>
-                        <a class="duration-100 text-xl text-cyan-50 font-bold hover:font-black home"
-                            href="#home" onclick="hide()">Home</a>
+                        <a class="duration-100 text-xl text-[#738290] font-bold hover:font-black home" href="#home"
+                            onclick="hide()">Home</a>
                     </li>
                     <li>
-                        <a class="duration-100 text-xl text-cyan-50 font-bold hover:font-black nav_element"
+                        <a class="duration-100 text-xl text-[#738290] font-bold hover:font-black nav_element"
                             href="#about" onclick="hide()">About</a>
                     </li>
                     <li>
-                        <a class="duration-100 text-xl text-cyan-50 font-bold hover:font-black nav_element "
+                        <a class="duration-100 text-xl text-[#738290] font-bold hover:font-black nav_element "
                             href="#team" onclick="hide()">Team</a>
                     </li>
                     <li>
-                        <a class="duration-100 text-xl text-cyan-50 font-bold hover:font-black nav_element"
+                        <a class="duration-100 text-xl text-[#738290] font-bold hover:font-black nav_element"
                             href="#work" onclick="hide()">Work</a>
                     </li>
                     <li>
-                        <a class="duration-100 text-xl text-cyan-50 font-bold hover:font-black nav_element"
+                        <a class="duration-100 text-xl text-[#738290] font-bold hover:font-black nav_element"
                             href="#service" onclick="hide()">Service</a>
                     </li>
                     <li>
-                        <a class="duration-100 text-xl text-cyan-50 font-bold hover:font-black"
-                            href="/contact" onclick="hide()">Contact</a>
+                        <a class="duration-100 text-xl text-[#738290] font-bold hover:font-black"
+                            href="https://wa.me/+919468921327" target="_blank" onclick="hide()">Contact</a>
                     </li>
 
                 </ul>
             </div>
             <div class="flex items-center gap-2 sm:gap-4 md:gap-6">
-                <button id="theme-toggle" type="button" class="rounded-lg text-xl  sm:text-2xl p-2.5 px-2 sm:p-2.5">
-                    <svg id="theme-toggle-dark-icon" class="hidden w-8 h-8 text-black" fill="currentColor"
-                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                    </svg>
-                    <svg id="theme-toggle-light-icon" class="hidden w-8 h-8 text-yellow-400" fill="currentColor"
-                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                            fill-rule="evenodd" clip-rule="evenodd"></path>
-                    </svg>
-                </button>
                 <ion-icon onclick="onToggleMenu(this)" name="menu"
-                    class="text-3xl mr-3 text-white cursor-pointer lg:hidden toggle-btn"></ion-icon>
+                    class="text-3xl mr-3 text-black cursor-pointer lg:hidden toggle-btn"></ion-icon>
             </div>
-            </nav>
+        </nav>
 
-           <!--<section class="bg-white flex lg:flex-row flex-col  categories px-10 py-3 lg:space-x-4 lg:space-y-0 space-y-4">
+        <!--<section class="bg-white flex lg:flex-row flex-col  categories px-10 py-3 lg:space-x-4 lg:space-y-0 space-y-4">
                 <div class="text-black cursor-pointer"><a href="">Phone Cases</a></div>
                 <div class="text-black cursor-pointer"><a href="">Visiting Cards</a></div>
                 <div class="text-black cursor-pointer"><a href="">Labels, Stickers & <br> Packaging</a></div>
-                <div class="text-black cursor-pointer"><a href="">Stationary</a></div>
+                <div class="text-black cursor-pointer"><a href="">Stationery</a></div>
                 <div class="text-black cursor-pointer"><a href="">Phone Cases</a></div>
                 <div class="text-black cursor-pointer"><a href="">Phone Cases</a></div>
                 <div class="text-black cursor-pointer"><a href="">Phone Cases</a></div>
             </section> -->
 
     </header>
-    <section class=" py-5 px-10 bg-[#233d9b] p-5 h-[80vh] flex flex-col lg:flex-row justify-center lg:gap-[60px] gap-[50px] items-center" id="home">
+    <section
+        class=" py-5 px-10 bg-[#E4F0D0] p-5 h-[80vh] flex flex-col lg:flex-row justify-center lg:gap-[60px] gap-[50px] items-center"
+        id="home">
         <div>
-            <img src="./resources/images/gettyimages-687511156-612x612.jpg" class="shadow-lg w-[80vw] lg:w-[40vw] rounded-[20px] items-center">
+            <img src="./resources/images/gettyimages-687511156-612x612.jpg"
+                class="shadow-lg w-[80vw] lg:w-[40vw] rounded-[20px] items-center">
         </div>
         <div class="">
-            <h2 class="text-white font-black text-[55px] lg:text-[70px]">My Name, My Pride</h2>
-            <p class="text-cyan-50 mt-2 md:mt-0 lg:text-xl text-2xl">High Quality Personalized Products.</p>
+            <h2 class="text-[#819c76] font-black text-[55px] lg:text-[70px]">My Name, My Pride</h2>
+            <p class="text-black mt-2 md:mt-0 lg:text-xl text-2xl">High Quality Personalized Products.</p>
         </div>
     </section>
-    <section class="px-10">
-        <br>
-        <h1 class="text-black font-bold text-[30px]">Explore all categories</h1>
-        <br>
-        <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-10 place-items-center gap-4">
-            <div class="flex flex-col items-center space-y-2">
-                <img src="./resources/images/360_F_110045173_QgmA3gg5OwTlLNQBqmPdFnkh6sPvsvt8.jpg" class="shadow-lg rounded-[100px] items-center">
-                <h2 class="text-black font-semibold">Bags</h2>
+    <section id="range" class="bg-[#FFFCF7] py-10">
+        <h1 class="text-5xl text-black text-center font-bold">
+            Product Ranges <br><br> </h1>
+        <div class="carousel-wrap px-10">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <a href="bags.html"><img class="rounded-full"
+                            src="https://images.pexels.com/photos/1214212/pexels-photo-1214212.jpeg?cs=srgb&dl=pexels-muffinsaurs-1214212.jpg&fm=jpg" />
+                        <br><span class="img-text">Bags</span>
+                    </a> </div>
+                <div class="item">
+                    <a> <img class="rounded-full" src="https://m.media-amazon.com/images/I/511kncQG7SL.jpg" />
+                        <br><span class="img-text">Pens</span>
+                    </a> </div>
+                <div class="item">
+                    <a><img class="rounded-full"
+                            src="https://m.media-amazon.com/images/I/61op4xRyIcL._AC_UY1100_.jpg" />
+                        <br><span class="img-text">Keychains</span>
+                    </a> </div>
+                <div class="item">
+                    <a><img class="rounded-full"
+                            src="https://i.ibb.co/vk64wVS/360-F-34703220-Ticz-ZRk73-Lnv-Ucvt2-J2qj57m-Kzw-KAt-BT.jpg" />
+                        <br><span class="img-text">Stationery</span> </a>
+                </div>
+
             </div>
-            <div class="flex flex-col items-center space-y-2">
-                <img src="./resources/images/360_F_110045173_QgmA3gg5OwTlLNQBqmPdFnkh6sPvsvt8.jpg" class="shadow-lg rounded-[100px] items-center">
-                <h2 class="text-black font-semibold">Bags</h2>
-            </div>
-            
         </div>
+
+
+
+
     </section>
 
     <!--footer-->
 
     <footer class="bg-[#1c1c1c] mt-10">
-       <div class="mx-auto w-full max-w-screen-xl p-3 pt-6 lg:py-8">
-           <div class="md:flex justify-center md:justify-between">
-               <div class="ml-5 mb-10">
-                   <a href="#" class="flex items-center">
-                       <img src="./resources/images/logo.png" class="sm:h-14 xs:ml-2 xs:mr-2 sm:mr-3 xl:h-16 h-10" />
-                       <span
-                           class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white text-black overflow-hidden font-poppins xl:3xl xs:text-base">Prototype</span>
-                       <!--<span
+        <div class="mx-auto w-full max-w-screen-xl p-3 pt-6 lg:py-8">
+            <div class="md:flex justify-center md:justify-between">
+                <div class="ml-5 mb-10">
+                    <a href="#" class="flex items-center">
+                        <img src="./resources/images/logo-white.svg" class="h-60" />
+                        <!--<span
                            class="self-center ml-2 px-1 py-1 md:px-2 rounded-lg bg-black text-white dark:bg-white dark:text-black text-xs whitespace-nowrap overflow-hidden font-poppins">beta</span>-->
-                   </a>
-               </div>
-               <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-                   <div>
-                       <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
-                       <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                           <li class="mb-3">
-                               <a href="https://twitter.com" class="hover:underline ">X</a>
-                           </li>
-                           <li class="mb-3">
-                               <a href="https://instagram.com" class="hover:underline">Instagram</a>
-                           </li>
-                           
-                       </ul>
-                   </div>
-                   <div>
-                       <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Nav Links</h2>
-                       <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                           <li class="mb-4">
-                               <a href="#home" class="hover:underline">Home</a>
-                           </li>
-                           <li class="mb-4">
-                               <a href="#about-sec" class="hover:underline">About</a>
-                           </li>
-                           <li class="mb-4">
-                               <a href="#features" class="hover:underline">Features</a>
-                           </li>
-                       </ul>
-                   </div>
-                   <div>
-                       <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-                       <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                           <li class="mb-4">
-                               <a href="#" class="hover:underline">Privacy Policy</a>
-                           </li>
-                           <li>
-                               <a href="#" class="hover:underline text-sm md:text-normal">Terms & Conditions</a>
-                           </li>
-                       </ul>
-                   </div>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-3">
+                                <a href="https://twitter.com" class="hover:underline ">X</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="https://instagram.com" class="hover:underline">Instagram</a>
+                            </li>
 
-               </div>
-           </div>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Nav Links</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="#home" class="hover:underline">Home</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#about-sec" class="hover:underline">About</a>
+                            </li>
+                            <li class="mb-4">
+                                <a href="#features" class="hover:underline">Features</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline text-sm md:text-normal">Terms & Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
 
-           <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-           <div class="sm:flex sm:items-center sm:justify-center">
-               <span class="text-[11px] md:text-sm text-gray-500 sm:text-center dark:text-gray-400">Made by <a
-                       class="hover:underline font-semibold" href="https://ex6nix-developers.vercel.app/" target="_blank">ex6nix Developers</a>
-           </div>
-       </div>
-    </footer>
+                </div>
+            </div>
+
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-center">
+                <span class="text-[11px] md:text-sm text-gray-500 sm:text-center dark:text-gray-400">Made by <a
+                        class="hover:underline font-semibold" href="https://ex6nix-developers.vercel.app/"
+                        target="_blank">ex6nix Developers</a>
+            </div>
+        </div>
+            
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="./js/owl.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/nav.js"></script>
 </body>
+
 </html>
